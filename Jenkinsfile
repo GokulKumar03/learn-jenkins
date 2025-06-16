@@ -9,7 +9,7 @@ pipeline {
     }
     // job must run in an hour. otherwise it will be time out
     options {
-        timeout(time: 1, unit: 'HOURS') 
+        timeout(time: 1, unit: 'SECOND') 
     }
 
     //build
