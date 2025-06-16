@@ -77,7 +77,7 @@ pipeline {
         }
 
         success {
-            echo 'This runs when the pipeline succeeds everytime.'
+            echo 'This runs when the pipeline succeeds every-time.'
         }
     }
 }
