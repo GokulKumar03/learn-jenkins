@@ -1,39 +1,41 @@
 pipeline {
     agent {
-    node {
-        label 'AGENT-1'
+        node {
+            label 'AGENT-1'
+        }
     }
-}
-// build
+
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building...'
             }
         }
+
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing...'
             }
         }
+
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying...'
             }
         }
     }
-// post build  --> It is nothing but , what to do after build
-        post { 
-        always { 
+
+    post {
+        always {
             echo 'I will always say Hello again!'
         }
 
-        fail { 
-            echo 'This runs when pipeline is failed. used generally to send some alerts'
+        failure {
+            echo 'This runs when the pipeline fails. Used generally to send alerts.'
         }
 
-        success { 
-            echo 'This runs when pipeline is success.'
+        success {
+            echo 'This runs when the pipeline succeeds.'
         }
     }
-    }
+}
