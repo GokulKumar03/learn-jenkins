@@ -34,6 +34,7 @@ pipeline {
                 echo "$GREETING"
                 """
                 echo 'Deploying...'
+                sleep 10
             }
         }
     }
