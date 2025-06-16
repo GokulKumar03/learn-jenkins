@@ -47,7 +47,7 @@ pipeline {
                 echo "$GREETING"
                 """
                 echo 'Deploying...'
-                sleep 10
+              //  sleep 10
             }
         }
         stage('check params') {
