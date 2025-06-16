@@ -21,6 +21,7 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+    }
 // post build  --> It is nothing but , what to do after build
         post { 
         always { 
@@ -36,4 +37,3 @@ pipeline {
         }
     }
     }
-}
